@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head> 
+		<meta charset="UTF-8" />
+		<title>Mohammed Nizam</title>
+		<link rel="stylesheet" href="style.css" />
+		<!-- Fontawesome CDN Link -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	  </head>
+	  
+<body>
+
+	<!-- Move to up button -->
+    <div class="scroll-button">
+		<a href="#home"><i class="fas fa-arrow-up"></i></a>
+	  </div>  
+
+	<!-- Home Section Start -->
+    <section class="home" id="home">
+		<div class="home-content">
+			<div class="text-one">Hello, I'm</div>
+			<div class="text-two">Nizam</div>
+		</div>
+	</section>
+
+	<!-- About Section Start -->
+	<section class="about" id="about">
+		<div class="about-content">
+			<div class="aimg">
+				<img src="images/aimg.jpg" alt="">
+			</div>
+			<div class="adef">
+				<div class="atitle">About Me</div>
+				<p>
+					Hello! I am Mohammed Nizam a native of Tirur, and I am 19 years of old. 
+					I am a passionate developer and I am skilled in web designing, python. 
+					Currently I am completing Diploma in Computer Egineering at SSMPTC Tirur.
+				</p>
+			</div>
+		</div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				// Array of background images
+				var bgImages = ["images/bgimg1.png", "images/bgimg2.png", "images/bgimg3.png", "images/bgimg4.png"];
+	
+				// Get a random index from the array
+				var randomIndex = Math.floor(Math.random() * bgImages.length);
+	
+				// Set the background image of the home section
+				document.getElementById("home").style.backgroundImage = "url('" + bgImages[randomIndex] + "')";
+			});
+		  </script>
+
+	</section>
+
+	<!-- Details tabs Section Start -->
+	<section class="detabs" id="detabs">
+		<div class="tabs">
+			<div class="tab active tone" onclick="openTab('tab1')">Skills</div>
+			<div class="tab ttwo" onclick="openTab('tab2')">Education</div>
+			<div class="tab tthr" onclick="openTab('tab3')">Experience</div>
+		</div>
+		  
+		  <!-- Skill Progress Bar tab -->
+		  <div id="tab1" class="tab-content active">
+		  
+			<!-- HTML Progress Bar -->
+			<div class="progress-container">HTML  <span>90%</span>
+			  <div class="progress-bar">
+				<div class="bar-segment bar-html"></div>
+			  </div>
+			</div>
+
+			<!-- CSS Progress Bar -->
+			<div class="progress-container">CSS  <span>80%</span>
+			  <div class="progress-bar">
+				<div class="bar-segment bar-css"></div>
+			  </div>
+			</div>
+		  
+			<!-- Python Progress Bar -->
+			<div class="progress-container">Python <span>70%</span>
+			  <div class="progress-bar">
+				<div class="bar-segment bar-python"></div>
+			  </div>
+			</div>
+		  </div>
+		
+		   <!-- Education Progress Bar tab -->
+		  <div id="tab2" class="tab-content">
+			
+			<div class="edu-container">SSLC  <span>2021</span>
+				<div class="edu-content">
+				  <p>Completed my SSLC under Kerala Board of Public Examination
+				     at PKMMHSS Edarikode.</p>
+				</div>
+			</div>
+
+			<div class="edu-container">Diploma in Egineering  <span>2021 - Present</span>
+				<div class="edu-content">
+				  <p>Currently I am completing Diploma in Computer Engineering 
+					 at Seethi Sahib Memorial Polytechnic College, Tirur.</p>
+				</div>
+			</div>
+
+		  </div>
+		  
+		  <div id="tab3" class="tab-content">
+			<div class="exp-container">
+				<div class="exp-content">
+				  <p>I am experienced in python programming and web designing.</p>
+				</div>
+			</div>
+		  </div>
+		  
+		  <script>
+			// Set default tab to "Tab 1"
+			let default_select = document.querySelector('.tab.tone')
+			openTab( 'tab1' , default_select );
+
+			function openTab( tabName , default_select ) {
+
+    			var i, tabContent, tabLinks;
+
+    			tabContent = document.getElementsByClassName("tab-content");
+    			for (i = 0; i < tabContent.length; i++) tabContent[i].style.display = "none";
+
+    			tabLinks = document.getElementsByClassName("tab");
+    			for (i = 0; i < tabLinks.length; i++) tabLinks[i].classList.remove("active");
+
+    			document.getElementById(tabName).style.display = "block";
+
+    			if (default_select) default_select.classList.add("active");
+    			else event.currentTarget.classList.add("active");
+			}
+		  </script>
+		  
+		
+		  
+    
+	</section>
+
+	<!-- Services section start -->
+	<section class="service" id="service">
+		
+		<div class="srv-container">
+			<h1>Services</h1>
+			<span>Creative Web Design</span>
+			<div class="srv-content">
+				<p>Provides creative website according to your requirements.</p>
+			</div>
+		</div>
+		  
+	</section>	
+	
+	<!-- Connect section start -->
+	<section class="connect" id="connect">
+		
+		<div class="cnt-container">
+			<span>Get In Touch</span>
+	  		<h1>Contact Me</h1>
+			  <div class="cnt-content">
+				<div class="cnt-item">
+				  <h4 class="cnt-left"><i class="material-symbols-outlined">location_on</i>Location</h4>
+				  <p class="cnt-right">Tirur,Kerala,India</p>
+				</div>
+				<div class="cnt-item">
+				  <h4 class="cnt-left">
+					<i class="material-symbols-outlined">mail</i>Email</h4>
+				  <p class="cnt-right">mohammednizam2404@gmail.com</p>
+				</div>
+				<div class="cnt-item">
+				  <h4 class="cnt-left"><i class="material-symbols-outlined">perm_phone_msg</i>Mobile</h4>
+				  <p class="cnt-right">+917907932464</p>
+				</div>
+			  </div>
+			
+		</div>
+		
+	</section>
+
+	<!-- Socil connect icon start -->
+	<div class="cnt-icons">
+		<div class="social-buttons">
+			<a href="http://wa.me/+917907932464" class="fa fa-whatsapp"></a>
+			<a href="https://www.instagram.com/nizam__._/" class="fa fa-instagram"></a>
+			<a href="http://t.me/+917907932464" class="fa fa-telegram"></a>
+			<a href="https://github.com/Nizam-324" class="fa fa-github"></a>
+		</div>
+	</div>
+
+	<!-- Contact section start -->
+	<section class="contact">
+		<div class="con-container">
+	  		<div class="con-form">
+				<form id="contactForm">
+		  			<div class="form-group">
+						<input type="text" id="name" name="name" placeholder="Name" required>
+
+						<input type="tel" id="phone" name="phone" placeholder="Mobile No" required>
+		  			</div>
+					
+		  			<div class="form-group">
+						<input type="email" id="email" name="email" placeholder="Email" required>
+		  			</div>
+  
+		  			<div class="form-group">
+						<textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+		  			</div>
+  
+		  			<button type="submit">Submit<i class="material-symbols-outlined">send</i></button>
+				</form>
+	  		</div>
+		</div>
+  	</section>
+	
+		<!-- Footer Section Start -->
+	<footer>
+		<div class="text">
+			<span>Mohammed Nizam | &#169; 2023 All Rights Reserved</span>
+		</div>
+	</footer>
+	
+	<!-- Rainbow div Section Start -->
+	<div class="rainbow-div"></div>
+
+</body>
+</html>

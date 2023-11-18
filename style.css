@@ -1,0 +1,570 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  
+}
+ 
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 8px;
+    position: absolute;
+    left: 0;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #f9ff90;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #f2f200;
+}
+
+
+
+/* Scroll TO Top Button CSS */
+.scroll-button a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #010101;
+  background: #ffffff;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+
+/* home section styling */
+.home{
+    height: 100vh;
+    width: 100%;
+    /* background: url("images/bgimg.jpeg") no-repeat; */
+    /* background: url("images/background.png") no-repeat; */
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+	background-repeat: no-repeat;
+	background-color: white;
+  }
+  .home .home-content{
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .home .text-one{
+    font-size: 30px;
+    color: #0E2431;
+    font-weight: 500;
+  }
+  .home .text-two{
+    font-size: 100px;
+    font-weight: 600;
+    margin-left: -3px;
+    -webkit-text-stroke: 2px black;
+	-webkit-text-fill-color: transparent;
+  }
+
+/* About section style */
+/* About Section Styling */
+.about {
+    padding: 30px;
+    background-color: #c3ecffd6;
+    align-items: center;
+    display: flex;
+  }
+  
+  .about-content {
+    /* height: 100vh; */
+    width: 80%;
+    margin: 40px auto;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    display: flex;
+	  gap: 5%;
+  }
+  
+  .about .atitle {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #0556a8;
+  }
+
+  .about .aimg img {
+    height: 330px;
+    width: 330px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+  
+  .about .adef p {
+    color:  #003366;
+    font-weight: 500;
+  }
+  
+
+
+
+/* Details tabs class="detabs"*/
+.detabs {
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffc3c3d6;
+}
+
+.tabs {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto 15px auto;
+  display: flex;
+  width: 80%;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+  width: calc(33.33% - 0px);
+  margin: 0 2px;
+  color: #fff;
+  font-size: 1.2em;
+  text-align: center;
+  box-sizing:unset;
+}
+
+.tab.tone{background-color: #EF0107;}
+.tab.tone.active{
+  background-color: #ffffff;
+  color: #EF0107;
+  border: 3px dashed  #EF0107;
+}
+
+.tab.ttwo{background-color: #EF0107}
+.tab.ttwo.active{
+  background-color: #ffffff;
+  color: #EF0107;
+  border: 3px dashed  #EF0107;
+}
+
+.tab.tthr{background-color: #EF0107}
+.tab.tthr.active{
+  background-color: #ffffff;
+  color: #EF0107;
+  border: 3px dashed  #EF0107;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  margin: 0 auto;
+  width: 80%;
+  background-color:  #fff6f6d2;
+
+}
+
+
+/* Skill prograss bar */
+.progress-container {
+  width: 90%;
+  
+  margin: 50px auto;
+  color: #fe1f1f;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.progress-container span {
+  font-size: 20px;
+  color: #e00000;
+}
+
+.progress-bar {
+  height: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #E62020;
+  margin: 10px;
+}
+
+.bar-segment {
+  height: 100%;
+  text-align: left;
+  line-height: 30px;
+  padding-left: 25px;
+  border-radius: 15px;
+  background: linear-gradient(45deg, rgb(255, 255, 255, 0.7) 25%, transparent 25%, transparent 50%, rgb(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.7) 75%, transparent 75%, transparent 100%);
+  animation: move 1s linear infinite;
+  background-size: 20px 20px;
+}
+
+@keyframes move {
+  100% {
+    background-position: 20px 0px;
+  }
+}
+
+.bar-html {
+  background-color: #E62020; 
+  width: 90%;
+}
+
+.bar-css {
+  background-color: #E62020;
+  width: 80%;
+}
+
+.bar-python {
+  background-color: #E62020; 
+  width: 70%;
+}
+
+
+
+/* Education Detials */
+.edu-container{
+  width: 90%;
+  
+  margin: 50px auto;
+  color: #EF0107;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 17px;
+}
+.edu-content{
+  color: #860000;
+}
+
+/* Experience Detials */
+.exp-container{
+  width: 90%;
+  text-align: left;
+  margin: 50px auto;
+  font-weight: 500;
+  font-size: 17px;
+}
+.exp-content{
+  color: #860000;
+}
+
+
+/* Service Detials */
+.service{
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffff2d87;
+}
+.srv-container{
+  width: 80%;
+  margin: 12px auto;
+  color: #f9b700;
+}
+.srv-container h1{
+  color: #FFD700;
+  font-size: 40px;
+  font-weight: 600;
+}
+.srv-container span{
+  font-size: 26px;
+}
+.srv-content{
+  color: #b2860d;
+}
+
+
+/* Connect Deatils */
+.connect{
+  padding: 10px 30px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ff7ba5b5;
+}
+.cnt-container{
+  width: 80%;
+  margin: 30px auto ;
+  color: #da0246;
+}
+.cnt-container h1{
+  color: #ff0051;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.cnt-container span{
+  margin-bottom: 5px;
+  
+}
+.cnt-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cnt-item {
+  display: contents;
+}
+.cnt-item i{
+  margin-right: 8px;
+}
+.cnt-item p {
+  color: #750a2b;
+}
+.cnt-left,
+.cnt-right {
+  width: 34%;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center; 
+}
+
+
+/* Socil connect icon */
+.cnt-icons{
+  padding: 30px 0;
+  background-color: #008cffc6;
+}
+.social-buttons{
+  width: 80%;
+  margin: 0px auto;
+}
+.social-buttons .fa{
+  background-color: #008cffc6;
+  border-radius: 50px;
+  color: #002a4d;
+  text-decoration: none;
+  font-size: 36px;
+  padding: 9px 12px;
+  margin: 0px 5px;
+  border: 3px solid #002a4d;
+  transition: background-color 0.5s ease;
+  text-align: center;
+}
+
+.social-buttons .fa:hover{
+  color:#eee; 
+  background-color: #002a4d;}
+
+
+/* Contact Detials */
+.contact{
+  padding: 30px 30px 60px 30px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(128, 128, 128, 0.452);
+}
+.con-container{
+  width: 80%;
+  margin: 0px auto;
+  
+}
+.con-container h1{
+  color: rgb(0, 2, 68);
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.con-container span{
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+ 
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+#contactForm input{
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 36px;
+  border: none;
+  font-family: inherit;
+  color: black;
+}
+#contactForm textarea{
+  width: 100%;
+  border-radius: 18px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color:rgb(255, 255, 255);
+  resize: none;
+  border: none;
+  font-family: inherit;
+  color: black;
+}
+#contactForm button {
+  background-color: rgb(76, 75, 75);
+  color: rgb(255, 255, 255);
+  padding-left: 30px;
+  font-size: 18px;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 36px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
+}
+#contactForm i{
+  color: rgb(76, 75, 75); 
+  background-color: white;
+  border-radius: 36px;
+  padding: 6px;
+  font-weight: 600;
+}
+#contactForm button, i{
+  display: flex;
+  align-items: center;
+  gap: 18px ;
+}
+#contactForm button:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(76, 75, 75);
+}
+
+
+/* Footer CSS */
+footer{
+  background: rgb(205, 0, 0);
+  padding: 6px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+footer .text span{
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* Rainbow div */
+.rainbow-div {
+  height: 15px;
+  width: 100%;
+  background: linear-gradient(to right, red 0%, red 14.28%, 
+                              orange 14.28%, orange 28.57%,
+                              yellow 28.57%, yellow 42.86%, 
+                              green 42.86%, green 57.14%, 
+                              blue 57.14%, blue 71.43%, 
+                              indigo 71.43%, indigo 85.72%, 
+                              violet 85.72%, violet 100%);
+}
+
+
+  /* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+
+  .home{	
+	background-position: right -80px center;
+  }
+  .about .aimg img {
+    height: 280px;
+    width: 270px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about .atitle {
+    text-align: center;
+  }
+  .about .adef {
+    width: 112%;
+	
+  }
+  .home .home-content{
+    height: 90vh;
+    justify-content: flex-end;
+  }
+  .home .text-two{
+    font-size: 90px;
+  }
+
+  .detabs{
+    padding: 50px 0;
+  }
+  .tab-content{
+    margin: 8px 15px;
+    width: -webkit-fill-available;
+    border-radius: 18px;
+  }
+  .tabs {
+    margin: 5px 20px;
+    width: -webkit-fill-available;
+  }
+  .tab{
+    border-radius: 36px;
+  }
+  .progress-container {
+    width: 100%;
+    margin: 40px auto;
+  }
+  .edu-container{
+    width: 100%;
+    margin: 40px auto;
+  }
+  .exp-container{
+    width: 100%;
+    margin: 40px auto;
+  }
+  .srv-container{
+    width: 100%;
+  }
+
+.social-buttons{text-align: center;}
+
+  .cnt-container{
+    width: 100%;
+    margin: 20px auto;
+    
+  }
+  .cnt-content{
+    display: unset;
+  }
+  .cnt-item{
+    display: grid;
+    margin-bottom: 10px;
+  }
+.cnt-left, .cnt-right {
+  margin-bottom: 0px;
+}
+.cnt-item p {
+  margin-left: 10px;
+}
+  .con-container{
+    width: 100%;
+    margin: 0px auto;
+  }
+  .form-group {
+    display: grid;
+  }
+  #contactForm button {
+    
+    padding-left: 15px;
+  }
+  footer .text span{
+    font-size: 15px;
+  }
+}
+  
