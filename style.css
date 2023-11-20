@@ -334,12 +334,14 @@
 
 /* Socil connect icon */
 .cnt-icons{
-  padding: 30px 0;
   background-color: #008cffc6;
+  
 }
 .social-buttons{
   width: 80%;
-  margin: 0px auto;
+  margin: 0 auto;
+  padding: 30px 0;
+
 }
 .social-buttons .fa{
   background-color: #008cffc6;
@@ -490,7 +492,7 @@ footer .text span{
     text-align: center;
   }
   .about .adef {
-    width: 112%;
+    width: 100%;
 	
   }
   .home .home-content{
@@ -532,8 +534,6 @@ footer .text span{
     width: 100%;
   }
 
-.social-buttons{text-align: center;}
-
   .cnt-container{
     width: 100%;
     margin: 20px auto;
@@ -552,6 +552,16 @@ footer .text span{
 .cnt-item p {
   margin-left: 10px;
 }
+.social-buttons{
+  text-align: center;
+  background-color: #002a4d;
+  width: 92%;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
+.social-buttons .fa{
+  border: 3px solid #008cffc6;
+}
+
   .con-container{
     width: 100%;
     margin: 0px auto;
