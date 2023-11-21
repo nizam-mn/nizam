@@ -12,17 +12,49 @@
 	  </head>
 	  
 <body>
+	<!-- Dark Mode -->
+	<div class="dark-mode">
+		<button id="darkModeToggle">
+	  		<i class="material-symbols-outlined dark-icon">dark_mode</i>
+	  		<i class="material-symbols-outlined light-icon">light_mode</i>
+		</button>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+  			const darkModeToggle = document.getElementById('darkModeToggle');
+  			const body = document.body;
 
+  			darkModeToggle.addEventListener('click', function() {
+    			body.classList.toggle('dark-mode');
+    			body.classList.toggle('dark-mode-active');
+  			});
+		});
+
+	</script>
+  	</div>
+  
 	<!-- Move to up button -->
     <div class="scroll-button">
-		<a href="#home"><i class="fas fa-arrow-up"></i></a>
-	  </div>  
+		<a href="#home"><i class="material-symbols-outlined">arrow_circle_up</i></a>
+		<script>
+			// Move to up button JS Code
+			let scrollBtn = document.querySelector(".scroll-button i");
+			console.log(scrollBtn);
+			let val;
+			window.onscroll = function() {
+  				if(document.documentElement.scrollTop > 20){
+    			   scrollBtn.style.display = "block";
+  				}else{
+    			  scrollBtn.style.display = "none";
+  				}
+			}
+		</script>
+	</div>  
 
 	<!-- Home Section Start -->
     <section class="home" id="home">
 		<div class="home-content">
 			<div class="text-one">Hello, I'm</div>
-			<div class="text-two">Nizam</div>
+			<div class="text-two" data-text="Nizam">Nizam</div>
 		</div>
 	</section>
 
@@ -37,7 +69,7 @@
 				<p>
 					Hello! I am Mohammed Nizam a native of Tirur, and I am 19 years of old. 
 					I am a passionate developer and I am skilled in web designing, python. 
-					Currently I am completing Diploma in Computer Egineering at SSMPTC Tirur.
+					Currently I am completing Diploma in Computer Engineering at SSMPTC Tirur.
 				</p>
 			</div>
 		</div>
@@ -138,9 +170,6 @@
 			}
 		  </script>
 		  
-		
-		  
-    
 	</section>
 
 	<!-- Services section start -->
@@ -216,7 +245,7 @@
 	  		</div>
 		</div>
   	</section>
-	
+
 		<!-- Footer Section Start -->
 	<footer>
 		<div class="text">
