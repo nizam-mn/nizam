@@ -54,8 +54,9 @@
     background-position: right;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
-	background-repeat: no-repeat;
-	background-color: white;
+	/* background-repeat: no-repeat; */
+	  background-color: white;
+  /* background-image: url(https://www.gstatic.com/lamda/images/sparkle_resting_v2_1ff6f6a71f2d298b1a31.gif); */
   }
   .home .home-content{
     width: 90%;
@@ -78,6 +79,7 @@
 	  -webkit-text-fill-color: transparent;
   }
 
+  
 /* About section style */
 /* About Section Styling */
 .about {
@@ -117,8 +119,6 @@
     font-weight: 500;
   }
   
-
-
 
 /* Details tabs class="detabs"*/
 .detabs {
@@ -304,6 +304,7 @@
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 10px;
+  cursor: auto;
 }
 .cnt-container span{
   margin-bottom: 5px;
@@ -639,6 +640,7 @@ footer .text span{
 .dark-mode section{
   background-color: #06153a;
   color: #fff;
+  /* filter: brightness(82%); */
 }
 .dark-mode .home{
   /* background-color: #091b47; */
@@ -650,10 +652,10 @@ footer .text span{
 .dark-mode .text-two{
   -webkit-text-stroke: 3px #3aa0f3;
 }
-/* .dark-mode section{
-  background-color: #06153a;
-  color: #fff;
-} */
+
+.dark-mode .about .aimg img {
+  filter: brightness(82%);
+}
 .dark-mode .about .atitle{
   color: #0078d4;
 }
