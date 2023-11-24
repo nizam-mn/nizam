@@ -52,10 +52,23 @@
 
 	<!-- Home Section Start -->
     <section class="home" id="home">
+	    <!-- <img src="images/bgif.gif" alt=""> -->
 		<div class="home-content">
 			<div class="text-one">Hello, I'm</div>
-			<div class="text-two" data-text="Nizam">Nizam</div>
+			<div class="text-two">Nizam</div>
 		</div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				// Array of background images
+				var bgImages = ["images/bgimg1.png", "images/bgimg2.png", "images/bgimg3.png", "images/bgimg4.png"];
+	
+				// Get a random index from the array
+				var randomIndex = Math.floor(Math.random() * bgImages.length);
+	
+				// Set the background image of the home section
+				document.getElementById("home").style.backgroundImage = "url('" + bgImages[randomIndex] + "')";
+			});
+		  </script>
 	</section>
 
 	<!-- About Section Start -->
@@ -73,19 +86,6 @@
 				</p>
 			</div>
 		</div>
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				// Array of background images
-				var bgImages = ["images/bgimg1.png", "images/bgimg2.png", "images/bgimg3.png", "images/bgimg4.png"];
-	
-				// Get a random index from the array
-				var randomIndex = Math.floor(Math.random() * bgImages.length);
-	
-				// Set the background image of the home section
-				document.getElementById("home").style.backgroundImage = "url('" + bgImages[randomIndex] + "')";
-			});
-		  </script>
-
 	</section>
 
 	<!-- Details tabs Section Start -->
@@ -190,7 +190,7 @@
 		
 		<div class="cnt-container">
 			<span>Get In Touch</span>
-	  		<h1>Contact Me</h1>
+	  	<a href="submissions.html"><h1>Contact Me</h1></a>	
 			  <div class="cnt-content">
 				<div class="cnt-item">
 				  <h4 class="cnt-left"><i class="material-symbols-outlined">location_on</i>Location</h4>
@@ -224,29 +224,77 @@
 	<!-- Contact section start -->
 	<section class="contact">
 		<div class="con-container">
-	  		<div class="con-form">
-				<form id="contactForm">
-		  			<div class="form-group">
-						<input type="text" id="name" name="name" placeholder="Name" required>
+		  <div class="con-form">
+			<form id="contactForm">
+			  <div class="form-group">
+				<input type="text" id="name" name="name" placeholder="Name" required>
+	
+				<input type="tel" id="phone" name="phone" placeholder="Mobile No" required>
+			  </div>
+	
+			  <div class="form-group">
+				<input type="email" id="email" name="email" placeholder="Email" required>
+			  </div>
+	
+			  <div class="form-group">
+				<textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+			  </div>
+	
+			  <button type="submit">Submit<i class="material-symbols-outlined">send</i></button>
+			</form>
+		  </div>
+		  <script>
+			document.addEventListener("DOMContentLoaded", function () {
+  				// Add a submit event listener to the form
+  				document.getElementById("contactForm").addEventListener("submit", function (event) {
+    			event.preventDefault(); // Prevent the default form submission
 
-						<input type="tel" id="phone" name="phone" placeholder="Mobile No" required>
-		  			</div>
-					
-		  			<div class="form-group">
-						<input type="email" id="email" name="email" placeholder="Email" required>
-		  			</div>
-  
-		  			<div class="form-group">
-						<textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-		  			</div>
-  
-		  			<button type="submit">Submit<i class="material-symbols-outlined">send</i></button>
-				</form>
-	  		</div>
+    			// Get form values
+    			var name = document.getElementById("name").value;
+    			var phone = document.getElementById("phone").value;
+    			var email = document.getElementById("email").value;
+    			var message = document.getElementById("message").value;
+
+    			// Create a timestamp for the submission
+    			var timestamp = new Date();
+
+    			// Create a data object
+    			var data = {
+      			name: name,
+      			phone: phone,
+      			email: email,
+      			message: message,
+      			timestamp: timestamp.toISOString(),
+    		};
+
+    		// Save the data to localStorage
+    		saveData(data);
+
+    		// Clear the form
+    		document.getElementById("contactForm").reset();
+  			});
+
+  			// Function to save data to localStorage
+  			function saveData(data) {
+   				// Get existing data from localStorage
+    			var existingData = localStorage.getItem("contactFormData");
+
+    			// If there is no existing data, create an empty array
+    			var dataArray = existingData ? JSON.parse(existingData) : [];
+
+    			// Add the new data to the array
+    			dataArray.push(data);
+
+    			// Save the updated array back to localStorage
+    				localStorage.setItem("contactFormData", JSON.stringify(dataArray));
+  	  			}
+			});
+
+		  </script>
 		</div>
-  	</section>
+	</section>
 
-		<!-- Footer Section Start -->
+	<!-- Footer Section Start -->
 	<footer>
 		<div class="text">
 			<span>Mohammed Nizam | &#169; 2023 All Rights Reserved</span>
