@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form Submissions</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Add your styles if needed -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #004f80;
+      text-align: center;
+    }
+
+    #submissions {
+      max-width: 80%;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    div {
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin: 5px 0;
+      font-weight: 500;
+    }
+
+    strong {
+      color: #d10000;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: #ccc;
+      margin: 10px 0;
+    }
+
+@media screen and (max-width: 768px) {
+  #submissions {
+    width: 100%;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <h1>Contact Form Submissions</h1>
+
+  <div id="submissions"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Retrieve data from localStorage
+      var data = localStorage.getItem("contactFormData");
+
+      // If there is data, display it
+      if (data) {
+        var dataArray = JSON.parse(data);
+
+        // Sort the data by timestamp in descending order
+        dataArray.sort(function (a, b) {
+          return new Date(b.timestamp) - new Date(a.timestamp);
+        });
+
+        // Display the data on the page
+        var submissionsDiv = document.getElementById("submissions");
+
+        dataArray.forEach(function (item) {
+          // Convert timestamp to Indian date and time
+          var indianDate = new Date(item.timestamp).toLocaleDateString('en-IN');
+          var indianTime = new Date(item.timestamp).toLocaleTimeString('en-IN');
+
+          var submissionDiv = document.createElement("div");
+          submissionDiv.innerHTML = `
+            <p><strong>Time & Date:</strong> ${indianDate} ${indianTime}</p>
+            <p><strong>Name:</strong> ${item.name}</p>
+            <p><strong>Phone:</strong> ${item.phone}</p>
+            <p><strong>Email:</strong> ${item.email}</p>
+            <p><strong>Message:</strong> ${item.message}</p>
+            <hr>
+          `;
+          submissionsDiv.appendChild(submissionDiv);
+        });
+      }
+    });
+
+  </script>
+</body>
+</html>
