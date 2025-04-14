@@ -1,3 +1,3 @@
 # nizam
 Visit :-
-https://nizam-324.github.io/nizam/
+https://nizam-mn.github.io/nizam/
